@@ -102,7 +102,7 @@ p {
 }
 
 .category {
-    background-color: #fff;
+    background-color: #deabc64a;
     border-radius: 8px;
     box-shadow: 10px 10px 5px rgba(224, 156, 161, 0.508);
 }
@@ -121,7 +121,7 @@ p {
 }
 
 .product {
-    background-color: #fff;
+    background-color: #deabc64a;
     border-radius: 8px;
     box-shadow: 10px 10px 5px rgba(39, 11, 111, 0.547)
 }
