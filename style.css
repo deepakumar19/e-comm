@@ -193,12 +193,12 @@ p {
 
 .table-body {
     background-color: rgba(186, 154, 154, 0.621);
+    color:rgba(41, 38, 40, 0.68)
 }
 
 .table {
     margin: 1rem auto;
-
-    width: 50%;
+    width: 65%;
     border-collapse: collapse;
     font-size: 0.9rem;
 }
@@ -213,12 +213,13 @@ p {
 
 .table tr td,
 tr th {
-    padding: 5px;
+
     border: 2px solid #deaac6;
 }
 
-.table tr {
+.table tr td {
     text-align: center;
+    padding: 6px;
 }
 
 @media screen and (max-width:768px) {
