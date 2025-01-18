@@ -56,10 +56,12 @@ p {
     padding: 10px;
 
 }
-.hero p{
+
+.hero p {
     font-size: 1rem;
     font-weight: 500;
 }
+
 .hero button {
     padding: 0.75rem 1rem;
     background-color: rgba(11, 111, 41, 0.6);
@@ -71,10 +73,12 @@ p {
     font-size: 1rem;
     font-weight: 700;
 }
-.hero button:hover{
+
+.hero button:hover {
     background-color: #800000;
-    color:#fff;
+    color: #fff;
 }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -86,7 +90,9 @@ p {
     text-align: center;
 }
 
-.categories, .products,.testimonials {
+.categories,
+.products,
+.testimonials {
     margin: 0 auto;
     padding: 1rem;
 }
@@ -97,8 +103,12 @@ p {
 
 
 }
-.categories h2, .products h2, .testimonials h2{
-    color:rgba(41, 38, 40, 0.68)
+
+.categories h2,
+.products h2,
+.testimonials h2,
+.product-features h2 {
+    color: rgba(41, 38, 40, 0.68)
 }
 
 .category {
@@ -145,11 +155,11 @@ p {
 
 .testimonials h2 {
     margin: 10px;
-    color: #000;
+
 }
 
 .testimonial {
-    background-color:#6f0b2250;
+    background-color: #6f0b2250;
     border-radius: 8px;
     color: #800000;
     box-shadow: 10px 10px 5px #c9183e50;
@@ -176,11 +186,47 @@ p {
     text-align: center;
 }
 
-@media screen and (max-width:768px){
-    .navbar{
+.table-head {
+    background-color: rgba(54, 20, 39, 0.521);
+    color: #fff;
+}
+
+.table-body {
+    background-color: rgba(186, 154, 154, 0.621);
+}
+
+.table {
+    margin: 1rem auto;
+
+    width: 50%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.product-features {
+    margin-top: 1rem;
+}
+
+.product-features h2 {
+    text-align: center;
+}
+
+.table tr td,
+tr th {
+    padding: 5px;
+    border: 2px solid #deaac6;
+}
+
+.table tr {
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .navbar {
         display: flex;
         flex-direction: column;
     }
+
     .grid {
 
         grid-template-columns: repeat(2, 1fr);
@@ -188,14 +234,67 @@ p {
     }
 }
 
-@media screen and (max-width:480px){
-    .navbar{
+@media screen and (max-width:480px) {
+    .navbar {
         display: flex;
         flex-direction: column;
     }
+
     .grid {
 
         grid-template-columns: repeat(1, 1fr);
 
+    }
+}
+
+.hero h2,
+p {
+    animation: textanimation 2s forwards;
+
+}
+
+.offers {
+    animation: blink 2s ease-in-out infinite;
+
+}
+
+.category img, .product img {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.category:hover, .product:hover{
+transform: scale(1.05);
+}
+@keyframes textanimation {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(50px); /*start position slighly below*/
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px); /*end position*/
     }
 }
